@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "school_favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
