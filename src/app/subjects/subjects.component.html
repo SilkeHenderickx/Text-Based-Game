@@ -1,17 +1,14 @@
-<h2>{{ subject.name | uppercase}} Details</h2>
-<div><span>id: </span>{{subject.id}}</div>
-<div><span>name: </span>{{subject.name}}</div>
-
-<div>
-  <label>name:
-    <input [(ngModel)]="subject.name" placeholder="name">
-  </label>
-</div>
-<br /><br />
-
 <h2>My Subjects</h2>
+<app-study-subject [subject]="selectedSubject" [student]="student"></app-study-subject>
+<br />
+<app-student></app-student>
 <ul class="subjects">
-  <li *ngFor="let subject of subjects">
-    <span class="badge">{{subject.id}}</span>  {{subject.name}}
+  <li *ngFor="let subject of subjects" [class.selected]="subject === selectedSubject" (click)="onSelect(subject)">
+    <span class="badge">{{subject.grade}}</span> {{subject.name}}
   </li>
 </ul>
+
+<br /><br />
+
+<app-subject-detail [subject]="selectedSubject"></app-subject-detail>
+<!-- [subject]="selectedSubject" is an Angular property binding-->

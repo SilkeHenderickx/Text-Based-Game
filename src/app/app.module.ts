@@ -4,12 +4,19 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectDetailComponent } from './subject-detail/subject-detail.component';
+import { StudySubjectComponent } from './study-subject/study-subject.component';
+import { StudentComponent } from './student/student.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    SubjectDetailComponent,
+    StudySubjectComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

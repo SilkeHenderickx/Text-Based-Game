@@ -1,0 +1,13 @@
+<div *ngIf="subject">
+  <!-- *ngIf = if undefined, ignore all subject -->
+
+
+  <h2>{{ subject.name | uppercase}} Details</h2>
+  <div><span>grade: </span>{{subject.grade}}</div>
+  <div><span>name: </span>{{subject.name}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="subject.name" placeholder="name">
+    </label>
+  </div>
+</div>
