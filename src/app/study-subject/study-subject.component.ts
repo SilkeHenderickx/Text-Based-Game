@@ -25,11 +25,11 @@ export class StudySubjectComponent implements OnInit {
   }
 
   Study(subject: Subject, student: Student): void{
-    if(this.student.productivity > this.minproductivity){
+    if((this.student.productivity > this.minproductivity)&&(this.student.productivity >= this.productivityCostPerStudy)){
       if(typeof this.subject !== 'undefined'){
         if((this.subject.grade < this.maxgrade) && (this.subject.grade >= this.mingrade)){
           this.subject.grade = this.subject.grade + 1;
-          modifyProductivityOnce(-10, this.student);
+          modifyProductivityOnce(-this.productivityCostPerStudy, this.student);
         }
       }
     }

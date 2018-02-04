@@ -18,15 +18,15 @@ export class SubjectsComponent implements OnInit {
 
   constructor() { }
 
-selectedSubject: Subject;
+  selectedSubject: Subject;
 
-onSelect(subject: Subject): void{
-  this.selectedSubject = subject;
-}
+  onSelect(subject: Subject): void{
+    this.selectedSubject = subject;
+  }
 
 
   ngOnInit() {
-@Input() student: Student;
+    @Input() student: Student;
     modifyProductivityRecurring(+1, this.student, 10000);
   }
 
